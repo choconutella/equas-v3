@@ -4,3 +4,5 @@
 /storage/*.key
 npm-debug.log
 yarn-error.log
+composer.lock
+
