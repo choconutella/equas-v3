@@ -59,7 +59,6 @@ Route::get('equas/urin/input/{instrument_type}/{instrument_id}/{page}','UrinCont
 Route::post('equas/urin/input/save','UrinController@input_store')->name('urin.inputsave');
 Route::get('equas/urin/success','UrinController@success')->name('urin.success');
 Route::get('equas/urin/report/{periode}/{instrument_id}','UrinController@report');
-Auth::routes();
 
 //ADMIN ROUTING PAGES
 Route::post('equas/admin/login','AdminController@login')->name('admin.login');
