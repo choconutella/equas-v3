@@ -19,8 +19,9 @@ use DB;
 class UrinController extends Controller
 {
     function login(Request $request){
-        echo 'hello';
+
         $data = User::where('user_id',$request->user_id)->firstOrFail();
+        
         if($data){
             if($data->password==$request->password){
                 $periode = UrPeriode::where('isactive','Y')->first();
@@ -29,6 +30,7 @@ class UrinController extends Controller
             }
             return redirect()->route('urin.index');
         }
+        
         return redirect()->route('urin.index');
     }
 

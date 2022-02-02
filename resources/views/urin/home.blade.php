@@ -4,7 +4,7 @@
 
 <p>Pelanggan Yth.</p>
 <p>
-    Kami mengundang Anda untuk berpartisipasi dalam Sysmex EQUAS U-FCM Periode 2021. 
+    Kami mengundang Anda untuk berpartisipasi dalam Sysmex EQUAS U-FCM Periode 2021.  
     EQUAS adalah sebuah kombinasi program IQC (Internal Quality Control), 
     EQAS (External Quality Assessment Scheme) dan Servis Teknis, 
     yang diselenggarakan oleh Sysmex untuk pengguna alat Urinalisa otomatis Sysmex UN-series.
