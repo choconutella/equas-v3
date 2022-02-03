@@ -23,6 +23,12 @@
                 <td>Done</td>
             </tr>
             @endif 
+        @else
+            <tr>
+                <td>
+                    No Instrument available.
+                </td>
+            </tr>
         @endif
     @endforeach
 
