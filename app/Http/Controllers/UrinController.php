@@ -101,9 +101,7 @@ class UrinController extends Controller
         $inst_arr = array();
 
         //get list of instrument
-        $instruments = UrInstrument::where('customer_id',$request->session()->get('user_id'))
-                                    ->where('isactive','Y')
-                                    ->get();
+        $instruments = UrInstrument::where('customer_id',$request->session()->get('user_id'))->get();
         $periode = UrPeriode::get();
 
         foreach($instruments as $instrument){

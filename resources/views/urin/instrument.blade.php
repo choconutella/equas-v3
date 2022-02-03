@@ -9,19 +9,21 @@
         <th>Status</th>
     </tr>
     @foreach ($instruments as $instrument)
-        @if ($inst_arr[$instrument->inst_serial_no]=='N')
-        <tr onclick="window.location.href='sampleinfo/{{$instrument->inst_type}}/{{$instrument->inst_serial_no}}'">    
-            <td>{{$instrument->inst_serial_no}}</td>
-            <td>{{$instrument->inst_type}}</td>           
-            <td>Not Done</td>
-        </tr>
-        @else
-        <tr>    
-            <td>{{$instrument->inst_serial_no}}</td>
-            <td>{{$instrument->inst_type}}</td>           
-            <td>Done</td>
-        </tr>
-        @endif 
+        @if ($instrument->isactive=='Y')
+            @if ($inst_arr[$instrument->inst_serial_no]=='N')
+            <tr onclick="window.location.href='sampleinfo/{{$instrument->inst_type}}/{{$instrument->inst_serial_no}}'">    
+                <td>{{$instrument->inst_serial_no}}</td>
+                <td>{{$instrument->inst_type}}</td>           
+                <td>Not Done</td>
+            </tr>
+            @else
+            <tr>    
+                <td>{{$instrument->inst_serial_no}}</td>
+                <td>{{$instrument->inst_type}}</td>           
+                <td>Done</td>
+            </tr>
+            @endif 
+        @endif
     @endforeach
 
 
