@@ -25,6 +25,10 @@ class UrinController extends Controller
         if($data){
             if($data->password==$request->password){
                 $periode = UrPeriode::where('isactive','Y')->first();
+                $periode_id = 'N/A';
+                if(!is_null($periode)){
+                    $periode_id = $periode->periode_id;
+                }
                 session(['user_id'=>$data->user_id,'user_name'=>$data->user_name,'periode'=>$periode->periode_id, 'islogin'=>true]);
                 return redirect()->route('urin.home');
             }
@@ -97,7 +101,9 @@ class UrinController extends Controller
         $inst_arr = array();
 
         //get list of instrument
-        $instruments = UrInstrument::where('customer_id',$request->session()->get('user_id'))->get();
+        $instruments = UrInstrument::where('customer_id',$request->session()->get('user_id'))
+                                    ->where('isactive','Y')
+                                    ->get();
         $periode = UrPeriode::get();
 
         foreach($instruments as $instrument){
