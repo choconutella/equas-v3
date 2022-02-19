@@ -22,12 +22,12 @@
           <legend class="col-form-label col-sm-2 pt-0">Tanggal Pengerjaan Material</legend>
             <div class="col-sm-10">
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="radio" id="radio1" value="26-10-2021">
-                    <label class="form-check-label" for="radio1">26-Oktober-2021</label>
+                    <input class="form-check-input" type="radio" name="radio" id="radio1" value="21-02-2022">
+                    <label class="form-check-label" for="radio1">21-Februari-2022</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="radio" id="radio2" value="27-10-2021">
-                    <label class="form-check-label" for="radio2">27-Oktober-2021</label>
+                    <input class="form-check-input" type="radio" name="radio" id="radio2" value="22-02-2022">
+                    <label class="form-check-label" for="radio2">22-Februari-2022</label>
                 </div>
             </div>
         </div>
@@ -110,12 +110,12 @@
           <legend class="col-form-label col-sm-2 pt-0">Tanggal Pengerjaan Material</legend>
             <div class="col-sm-10">
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="radio" id="radio1" value="26-10-2021">
-                    <label class="form-check-label" for="radio1">26-Oktober-2021</label>
+                    <input class="form-check-input" type="radio" name="radio" id="radio1" value="21-02-2022">
+                    <label class="form-check-label" for="radio1">21-Februari-2022</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="radio" id="radio2" value="27-10-2021">
-                    <label class="form-check-label" for="radio2">27-Oktober-2021</label>
+                    <input class="form-check-input" type="radio" name="radio" id="radio2" value="22-02-2022">
+                    <label class="form-check-label" for="radio2">22-Februari-2022</label>
                 </div>
             </div>
         </div>
