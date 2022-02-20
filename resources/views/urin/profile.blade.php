@@ -8,7 +8,7 @@
 </div>
 @endif
 
-<form method="POST" action="{{route('koagulasi.profilesave')}}">
+<form method="POST" action="{{route('urin.profilesave')}}">
     {{ csrf_field() }}
     <div class="form-group">
         <label for="custid">ID Customer</label>
