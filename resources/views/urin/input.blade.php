@@ -15,9 +15,9 @@
     <br>
 
     @if ($page=='1')
-        <div class="col-md-4"><img src="{{url('storage/img/u-fcm-a.png')}}" width="230"></div>                
+        <div class="col-md-4"><img src="{{url('storage/img/u-material-a.png')}}" width="230"></div>                
     @elseif ($page=='2')
-        <div class="col-md-4"><img src="{{url('storage/img/u-fcm-b.png')}}" width="230"></div>  
+        <div class="col-md-4"><img src="{{url('storage/img/u-material-b.png')}}" width="230"></div>  
     @endif
 
     <br>
