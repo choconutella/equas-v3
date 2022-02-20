@@ -55,8 +55,8 @@ Route::get('equas/urin/sampleinfo/{instrument_type}/{instrument_id}','UrinContro
 Route::post('equas/urin/sampleinfo/save','UrinController@sampleinfo_store')->name('urin.sampleinfosave');
 Route::get('equas/urin/qc/{instrument_type}/{instrument_id}','UrinController@qc')->name('urin.qc');
 Route::post('equas/urin/qc/save','UrinController@qc_store')->name('urin.qcsave');
-Route::get('equas/urin/input/{instrument_type}/{instrument_id}/{page}','UrinController@input')->name('urin.input');
-Route::post('equas/urin/input/save','UrinController@input_store')->name('urin.inputsave');
+Route::get('equas/urin/inputx/{instrument_type}/{instrument_id}/{page}','UrinController@input')->name('urin.input');
+Route::post('equas/urin/inputx/save','UrinController@input_store')->name('urin.inputsave');
 Route::get('equas/urin/success','UrinController@success')->name('urin.success');
 Route::get('equas/urin/report/{periode}/{instrument_id}','UrinController@report');
 
