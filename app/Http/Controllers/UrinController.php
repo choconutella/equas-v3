@@ -206,7 +206,7 @@ class UrinController extends Controller
             $resulth_id = $resulth->id;
         }
         elseif($request->page==2){
-            $resulth = DB::table('ur_qch')->where('customer_id',$request->session()->get('user_id'))
+            $resulth = DB::table('ur_resulth')->where('customer_id',$request->session()->get('user_id'))
                         ->where('periode',$request->session()->get('periode'))
                         ->where('inst_serial_no',$request->instrument_id)
                         ->where('inst_type',$request->instrument_type)->first();
