@@ -84,16 +84,30 @@ class UrinController extends Controller
     }
 
     function profile_store(Request $request){
-        $profile = new UrProfile();
-        $profile->customer_id = $request->session()->get('user_id');
-        $profile->address = $request->address;
-        $profile->pj_lab = $request->pjlab;
-        $profile->email_pj_lab = $request->email_pjlab;
-        $profile->ka_lab = $request->kalab;
-        $profile->email_ka_lab = $request->email_kalab;
-        $profile->hp = $request->hp;
-        $profile->telp = $request->telp;
-        $profile->save();
+        $count = UrProfile::where('customer_id',$request->session()->get('user_id'))->count();
+        if ($count > 0) {
+            $profile = UrProfile::where('customer_id',$request->session()->get('user_id'))->first();
+            $profile->address = $request->address;
+            $profile->pj_lab = $request->pjlab;
+            $profile->email_pj_lab = $request->email_pjlab;
+            $profile->ka_lab = $request->kalab;
+            $profile->email_ka_lab = $request->email_kalab;
+            $profile->hp = $request->hp;
+            $profile->telp = $request->telp;
+            $profile->save();
+        }
+        else{
+            $profile = new UrProfile();
+            $profile->customer_id = $request->session()->get('user_id');
+            $profile->address = $request->address;
+            $profile->pj_lab = $request->pjlab;
+            $profile->email_pj_lab = $request->email_pjlab;
+            $profile->ka_lab = $request->kalab;
+            $profile->email_ka_lab = $request->email_kalab;
+            $profile->hp = $request->hp;
+            $profile->telp = $request->telp;
+            $profile->save();
+        }
         return redirect()->route('urin.profile')->with('message','Save Successfully');
 
     }
