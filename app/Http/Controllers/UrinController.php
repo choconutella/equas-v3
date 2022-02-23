@@ -108,7 +108,7 @@ class UrinController extends Controller
             $profile->telp = $request->telp;
             $profile->save();
         }
-        return redirect()->route('urin.profile')->with('message','Save Successfully');
+        return redirect()->route('urin.profile');
 
     }
 
