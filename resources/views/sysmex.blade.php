@@ -88,7 +88,7 @@
                     <a href="https://sysmex.co.id">Home</a>
                     <a href="https://sysmex-indonesia.com/equas/hematologi">Equas-Hema</a>
                     <a href="https://sysmex-indonesia.com/equas/koagulasi">Equas-Koag</a>
-                    <a href="https://sysmex-indonesia.com/equas/koagulasi">Equas-Urin</a>
+                    <a href="https://sysmex-indonesia.com/equas/urin">Equas-Urin</a>
                 </div>
             </div>
         </div>
