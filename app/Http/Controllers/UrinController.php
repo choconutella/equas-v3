@@ -117,7 +117,7 @@ class UrinController extends Controller
 
         //get list of instrument
         $instruments = UrInstrument::where('customer_id',$request->session()->get('user_id'))->get();
-        $periode = UrPeriode::get();
+        $prev_periode = UrPeriode::get();
         
         foreach($instruments as $instrument){
             $count = UrResultH::where('inst_serial_no',$instrument->inst_serial_no)
@@ -133,7 +133,8 @@ class UrinController extends Controller
             }
         }
   
-        return view('urin.instrument',['instruments'=>$instruments,'inst_arr'=>$inst_arr,'periodes'=>$periode]);
+        return view('urin.instrument',['instruments'=>$instruments,'inst_arr'=>$inst_arr,
+                                        'periode'=>$request->session()->get('periode'),'prev_periodes'=>$prev_periode]);
     }
 
     function sampleinfo(Request $request, $instrument_type, $instrument_id){

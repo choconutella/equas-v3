@@ -8,29 +8,38 @@
         <th>Type</th>
         <th>Status</th>
     </tr>
-    @foreach ($instruments as $instrument)
-        @if ($instrument->isactive=='Y')
-            @if ($inst_arr[$instrument->inst_serial_no]=='N')
-            <tr onclick="window.location.href='sampleinfo/{{$instrument->inst_type}}/{{$instrument->inst_serial_no}}'">    
-                <td>{{$instrument->inst_serial_no}}</td>
-                <td>{{$instrument->inst_type}}</td>           
-                <td>Not Done</td>
-            </tr>
+    @if ($periode <> 'N/A')
+        @foreach ($instruments as $instrument)
+            @if ($instrument->isactive=='Y')
+                @if ($inst_arr[$instrument->inst_serial_no]=='N')
+                <tr onclick="window.location.href='sampleinfo/{{$instrument->inst_type}}/{{$instrument->inst_serial_no}}'">    
+                    <td>{{$instrument->inst_serial_no}}</td>
+                    <td>{{$instrument->inst_type}}</td>           
+                    <td>Not Done</td>
+                </tr>
+                @else
+                <tr>    
+                    <td>{{$instrument->inst_serial_no}}</td>
+                    <td>{{$instrument->inst_type}}</td>           
+                    <td>Done</td>
+                </tr>
+                @endif 
             @else
-            <tr>    
-                <td>{{$instrument->inst_serial_no}}</td>
-                <td>{{$instrument->inst_type}}</td>           
-                <td>Done</td>
-            </tr>
-            @endif 
-        @else
-            <tr>
-                <td>
-                    No Instrument available.
-                </td>
-            </tr>
-        @endif
-    @endforeach
+                <tr>
+                    <td>
+                        No Instrument available.
+                    </td>
+                </tr>
+            @endif
+        @endforeach
+    @else
+        <tr>
+            <td>
+                Periode not started.
+            </td>
+        </tr>
+    @endif
+    
 
 
     <!--
@@ -52,7 +61,7 @@
         <th>Serial No.</th>
         <th>Download</th>
     </tr>
-    @foreach ($periodes as $periode)
+    @foreach ($prev_periodes as $periode)
         @foreach ($instruments as $instrument)
         <tr>
             <td>{{$periode->periode_id}}</td>
